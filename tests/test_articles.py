@@ -1,5 +1,5 @@
 from dotenv import load_dotenv
-from src.upload import *
+from src.articles import *
 
 load_dotenv('./')
 

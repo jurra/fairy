@@ -6,10 +6,14 @@
 
 # ignore binaries
 example.egg-info
-.env/
+.env*
 .venv/
 __pycache__
 
 # Auth
 *token
 .notes/
+default-*
+
+# files created for tests
+tests/fixtures/**
