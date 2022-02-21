@@ -16,4 +16,4 @@ __pycache__
 default-*
 
 # files created for tests
-tests/fixtures/**
+# tests/fixtures/**
