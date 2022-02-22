@@ -6,7 +6,10 @@ Here I am experimetning with several concepts we have discussed:
 4. Explore validation mechanisms.
 5. Other ideas......
 
-## Running the code
+## Dir structure
+I am keeping `extension/` and `fairy_pkg/` separate for the time being.
+
+## Running the fairy_pkg code
 - I am using python virtual environments:
 ```sh
 # Create environment for project
@@ -16,4 +19,30 @@ python3 -m venv .env
 source .env/bin/activate
 ```
 - To reproduce the environment dependencies, I am relying on `setup.py`
-- In development mode I install packages using `pip install -e .`
+- In development mode I install packages using `pip install -e .[dev]`. 
+(`[dev]` will install the development dependencies.)
+
+## Running the extension code
+You need to have jupyterlab setup in your development environment, currently I added it as a dependency in the `extension/setup.py` file.
+
+For more info on how extensions work go here: https://github.com/jupyterlab/extension-examples/tree/master/hello-world
+
+Use the same environment, navigate to the extension folder and do: 
+
+```sh
+# install packages for extension in dev mode
+pip install -e .[dev]
+
+# Link your development version of the extension with JupyterLab
+jupyter labextension develop . --overwrite
+
+# Build the frontend app
+npm run build
+
+# Dont forget to activate environment if you havent
+. <my_env>/bin/activate
+
+# Dont forget to spin jupyter lab
+jupyter lab
+```
+

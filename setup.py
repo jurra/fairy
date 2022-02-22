@@ -5,9 +5,16 @@ setup(
     version="0.1.0",
     packages=find_packages(),
     install_requires=[
-        'pytest',
         # 'hashlib',
         'requests',
-        'python-dotenv'
-    ]
+        'python-dotenv',
+    ],
+    extras_require = {
+        'dev': [
+            'pytest',
+            'jupyterlab',
+            'jupyter-packaging',
+            'nodejs'
+        ]
+    }
 )
