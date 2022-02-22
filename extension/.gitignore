@@ -1,11 +1,6 @@
-.env
-.vscode/
-
-# ipynb
-.ipynb_checkpoints/
-
-# ignore binaries
-example.egg-info
-.env/
-.venv/
-__pycache__
+*.bundle.*
+lib/
+node_modules/
+*.egg-info/
+.ipynb_checkpoints
+*.tsbuildinfo
